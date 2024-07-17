@@ -5,9 +5,24 @@ const routes = [
     children: [{ path: "", component: () => import("pages/IndexPage.vue") }],
     children: [
       {
-        path: "/identities",
-        name: "inventory.identities",
+        path: "identities",
+        name: "inventoryIdentities",
         component: () => import("pages/Identities/table/index.vue"),
+      },
+      {
+        path: "products",
+        name: "inventoryProducts",
+        component: () => import("pages/products/table/index.vue"),
+      },
+      {
+        path: "operations",
+        name: "inventoryOperations",
+        component: () => import("pages/operations/add/index.vue"),
+      },
+      {
+        path: "operations/:id",
+        name: "inventoryOperationsShow",
+        component: () => import("pages/operations/show/index.vue"),
       },
     ],
   },
